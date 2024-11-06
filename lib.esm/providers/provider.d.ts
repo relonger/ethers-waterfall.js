@@ -310,9 +310,9 @@ export declare class Block implements BlockParams, Iterable<string> {
      */
     readonly timestamp: number;
     /**
-     *  The block hash of the parent block.
+     *  The block hashes of the parent blocks.
      */
-    readonly parentHash: string;
+    readonly parentHashes: string[];
     /**
      *  The hash tree root of the parent beacon block for the given
      *  execution block. See [[link-eip-4788]].

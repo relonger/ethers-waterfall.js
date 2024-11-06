@@ -164,9 +164,9 @@ class Block {
      */
     timestamp;
     /**
-     *  The block hash of the parent block.
+     *  The block hashes of the parent blocks.
      */
-    parentHash;
+    parentHashes;
     /**
      *  The hash tree root of the parent beacon block for the given
      *  execution block. See [[link-eip-4788]].
@@ -257,7 +257,7 @@ class Block {
             hash: getValue(block.hash),
             number: block.number,
             timestamp: block.timestamp,
-            parentHash: block.parentHash,
+            parentHashes: block.parentHashes,
             parentBeaconBlockRoot: block.parentBeaconBlockRoot,
             nonce: block.nonce,
             difficulty: block.difficulty,
@@ -309,7 +309,7 @@ class Block {
      *  Returns a JSON-friendly value.
      */
     toJSON() {
-        const { baseFeePerGas, difficulty, extraData, gasLimit, gasUsed, hash, miner, prevRandao, nonce, number, parentHash, parentBeaconBlockRoot, stateRoot, receiptsRoot, timestamp, transactions } = this;
+        const { baseFeePerGas, difficulty, extraData, gasLimit, gasUsed, hash, miner, prevRandao, nonce, number, parentHashes, parentBeaconBlockRoot, stateRoot, receiptsRoot, timestamp, transactions } = this;
         return {
             _type: "Block",
             baseFeePerGas: toJson(baseFeePerGas),
@@ -319,7 +319,7 @@ class Block {
             gasUsed: toJson(gasUsed),
             blobGasUsed: toJson(this.blobGasUsed),
             excessBlobGas: toJson(this.excessBlobGas),
-            hash, miner, prevRandao, nonce, number, parentHash, timestamp,
+            hash, miner, prevRandao, nonce, number, parentHashes, timestamp,
             parentBeaconBlockRoot, stateRoot, receiptsRoot,
             transactions,
         };

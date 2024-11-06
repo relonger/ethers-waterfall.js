@@ -11,7 +11,7 @@ export interface TestBlockchainAddress {
 export interface TestBlockchainBlock {
     test: string;
     hash: string;
-    parentHash: string;
+    parentHashes: string[];
     number: number;
     timestamp: number;
     nonce: string;

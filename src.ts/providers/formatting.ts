@@ -34,9 +34,9 @@ export interface BlockParams {
 
     /**
      *  The hash of the previous block in the blockchain. The genesis block
-     *  has the parentHash of the [[ZeroHash]].
+     *  has the parentHashes of the [[ZeroHash]].
      */
-    parentHash: string;
+    parentHashes: string[];
 
     /**
      *  The hash tree root of the parent beacon block for the given

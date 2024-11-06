@@ -28,7 +28,7 @@ export const testBlock = {
         {
             test: "old-homestead-block",
             hash: "0x3d6122660cc824376f11ee842f83addc3525e2dd6756b9bcf0affa6aa88cf741",
-            parentHash: "0xb495a1d7e6663152ae92708da4843337b958146015a2802f4193a410044698c9",
+            parentHashes: ["0xb495a1d7e6663152ae92708da4843337b958146015a2802f4193a410044698c9"],
             number: 3,
             timestamp: 1438270048,
             nonce: "0x2e9344e0cbde83ce",
@@ -45,7 +45,7 @@ export const testBlock = {
             test: "london-block",
             number: 14413999,
             hash: "0x6c79356d40ebb6ed63dc19f5d407f8f1c876047b59dc1a4598cce0e64dcabec5",
-            parentHash: "0xbf09b0e215f247a5066d19ece5b4c66960771d45fae62985e8d751fb1adcfe2f",
+            parentHashes: ["0xbf09b0e215f247a5066d19ece5b4c66960771d45fae62985e8d751fb1adcfe2f"],
             timestamp: 1647654576,
             nonce: "0xb4bc9979af5369fe",
             difficulty: BigInt("12841513359509721"),
@@ -92,7 +92,7 @@ export const testBlock = {
         {
             test: "eip-4844-BLob-block",
             hash: "0xa76eb2ed547798d6010f599902788136f0cd289e2c6df5bbf5242e36e356124d",
-            parentHash: "0x2b579cb7224abdbe7a66c76380d60329bba41d95d225feb80ca1a78cf83a5124",
+            parentHashes: ["0x2b579cb7224abdbe7a66c76380d60329bba41d95d225feb80ca1a78cf83a5124"],
             parentBeaconBlockRoot: '0xa05d27aa9c2f3d57943ca86134a08f6f7852ad5e9dbe360f86b466e2f0ed7bb5',
             number: 5198187,
             timestamp: 1706801700,

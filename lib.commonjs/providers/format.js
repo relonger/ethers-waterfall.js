@@ -109,7 +109,7 @@ function formatLog(value) {
 exports.formatLog = formatLog;
 const _formatBlock = object({
     hash: allowNull(formatHash),
-    parentHash: formatHash,
+    parentHashes: arrayOf(formatHash),
     parentBeaconBlockRoot: allowNull(formatHash, null),
     number: index_js_4.getNumber,
     timestamp: index_js_4.getNumber,

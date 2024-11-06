@@ -98,7 +98,7 @@ export function formatLog(value) {
 }
 const _formatBlock = object({
     hash: allowNull(formatHash),
-    parentHash: formatHash,
+    parentHashes: arrayOf(formatHash),
     parentBeaconBlockRoot: allowNull(formatHash, null),
     number: getNumber,
     timestamp: getNumber,

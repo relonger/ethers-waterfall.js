@@ -472,9 +472,9 @@ export class Block implements BlockParams, Iterable<string> {
     readonly timestamp!: number;
 
     /**
-     *  The block hash of the parent block.
+     *  The block hashes of the parent blocks.
      */
-    readonly parentHash!: string;
+    readonly parentHashes!: string[];
 
     /**
      *  The hash tree root of the parent beacon block for the given
@@ -587,7 +587,7 @@ export class Block implements BlockParams, Iterable<string> {
             number: block.number,
             timestamp: block.timestamp,
 
-            parentHash: block.parentHash,
+            parentHashes: block.parentHashes,
             parentBeaconBlockRoot: block.parentBeaconBlockRoot,
 
             nonce: block.nonce,
@@ -647,7 +647,7 @@ export class Block implements BlockParams, Iterable<string> {
     toJSON(): any {
         const {
             baseFeePerGas, difficulty, extraData, gasLimit, gasUsed, hash,
-            miner, prevRandao, nonce, number, parentHash, parentBeaconBlockRoot,
+            miner, prevRandao, nonce, number, parentHashes, parentBeaconBlockRoot,
             stateRoot, receiptsRoot, timestamp, transactions
         } = this;
 
@@ -660,7 +660,7 @@ export class Block implements BlockParams, Iterable<string> {
             gasUsed: toJson(gasUsed),
             blobGasUsed: toJson(this.blobGasUsed),
             excessBlobGas: toJson(this.excessBlobGas),
-            hash, miner, prevRandao, nonce, number, parentHash, timestamp,
+            hash, miner, prevRandao, nonce, number, parentHashes, timestamp,
             parentBeaconBlockRoot, stateRoot, receiptsRoot,
             transactions,
         };
