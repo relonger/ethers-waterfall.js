@@ -117,7 +117,7 @@ const _formatBlock = object({
 
     timestamp: getNumber,
     nonce: allowNull(formatData),
-    difficulty: getBigInt,
+    difficulty: allowNull(getBigInt),
 
     gasLimit: getBigInt,
     gasUsed: getBigInt,

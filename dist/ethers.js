@@ -17049,7 +17049,7 @@ const _formatBlock = object({
     number: getNumber,
     timestamp: getNumber,
     nonce: allowNull(formatData),
-    difficulty: getBigInt,
+    difficulty: allowNull(getBigInt),
     gasLimit: getBigInt,
     gasUsed: getBigInt,
     stateRoot: allowNull(formatHash, null),

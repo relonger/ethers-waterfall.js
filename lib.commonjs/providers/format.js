@@ -114,7 +114,7 @@ const _formatBlock = object({
     number: index_js_4.getNumber,
     timestamp: index_js_4.getNumber,
     nonce: allowNull(formatData),
-    difficulty: index_js_4.getBigInt,
+    difficulty: allowNull(index_js_4.getBigInt),
     gasLimit: index_js_4.getBigInt,
     gasUsed: index_js_4.getBigInt,
     stateRoot: allowNull(formatHash, null),

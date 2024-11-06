@@ -334,7 +334,7 @@ export declare class Block implements BlockParams, Iterable<string> {
      *  On modern networks, this is a random number arrived at using
      *  randao.  @TODO: Find links?
      */
-    readonly difficulty: bigint;
+    readonly difficulty: null | bigint;
     /**
      *  The total gas limit for this block.
      */

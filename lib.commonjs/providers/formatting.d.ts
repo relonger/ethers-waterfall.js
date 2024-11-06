@@ -42,7 +42,7 @@ export interface BlockParams {
      *  For proof-of-work networks, the difficulty target is used to
      *  adjust the difficulty in mining to ensure a expected block rate.
      */
-    difficulty: bigint;
+    difficulty?: null | bigint;
     /**
      *  The maximum amount of gas a block can consume.
      */
